@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Logo from '../assets/TheTable-removebg-preview.png'
 
 const Nav = () => {
     let Links =[
@@ -16,7 +16,9 @@ const Nav = () => {
         <span className='text-3xl text-indigo-600 mr-1 pt-2'>
         <ion-icon name="logo-ionic"></ion-icon>
         </span>
-        Designer
+        <div className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'>
+            <img src={Logo} className='w-full h-full object-contain' alt=""/>
+          </div>
       </div>
       
       <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>

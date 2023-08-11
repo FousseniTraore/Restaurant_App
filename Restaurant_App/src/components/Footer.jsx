@@ -6,7 +6,7 @@ function Footer() {
     <footer className='w-full bg-black'>
         <div className=' px-10 flex flex-col justify-center items-center   text-white md:flex-row md:gap-20'>
           <div className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'>
-            <img src={Logo} className='w-full h-full object-contain' alt="" />
+            <img src={Logo} className='w-full h-full object-contain' alt="" /> 
           </div>
           <div className='md:px-40'>
             <h6 className='font-semibold py-2'>Company</h6>
