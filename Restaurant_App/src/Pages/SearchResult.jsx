@@ -25,7 +25,7 @@ const SearchResult = () => {
           method: 'POST',
           headers: {
             'content-type': 'application/x-www-form-urlencoded',
-            'X-RapidAPI-Key': 'fe7f75a935msh568e513c046d99bp1ff4bdjsnaaf41eca86eb',
+            'X-RapidAPI-Key': '48410fbc59msh59270c075d3d0b0p123c50jsnf833bab38ecc',
             'X-RapidAPI-Host': 'worldwide-restaurants.p.rapidapi.com'
           },
           body: new URLSearchParams({
@@ -38,7 +38,7 @@ const SearchResult = () => {
 
         fetch(restaurantUrl, restaurantOptions)
           .then(response => response.json())
-          .then(result => setResults(result))
+          .then(res => setResults(res.results))
           .catch(restaurantError => console.log('Restaurant API error', restaurantError));
         })
       .catch(error => console.log('error', error));
