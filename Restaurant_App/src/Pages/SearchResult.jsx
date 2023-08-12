@@ -47,7 +47,23 @@ const SearchResult = () => {
   
   return (
     <div className='lg:px-30 sm:px-16 px-10'>
-  
+      {/* render the restaurant data */}
+      {results ? (
+        <div>
+          <h2>Restaurant Data:</h2>
+          {results.data && results.data.map(restaurant => (
+            <div key={restaurant.id}>
+              <h3>{restaurant.name}</h3>
+              <p>Address: {restaurant.address}</p>
+              {restaurant.photos.length > 0 && (
+                <img src={restaurant.photos[0].images.small.url} alt={restaurant.name} />
+              )}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p>Loading restaurant data...</p>
+      )}
     </div>
   )
 }
