@@ -50,14 +50,15 @@ const SearchResult = () => {
       {/* render the restaurant data */}
       {results ? (
         <div>
-          <h2>Restaurant Data:</h2>
-          {results.data && results.data.map(restaurant => (
-            <div key={restaurant.id}>
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900">The best restaurant in {location}</h2>
+          {results.data && results.data.map((restaurant, index) => (
+            <div key={index}>
+              <div>
+                <img src={restaurant.photo.images.small.url} alt={restaurant.name} />
+              </div>
               <h3>{restaurant.name}</h3>
               <p>Address: {restaurant.address}</p>
-              {restaurant.photos.length > 0 && (
-                <img src={restaurant.photos[0].images.small.url} alt={restaurant.name} />
-              )}
+              
             </div>
           ))}
         </div>
