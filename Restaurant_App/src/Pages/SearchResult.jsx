@@ -18,12 +18,43 @@ const SearchResult = () => {
       method: 'GET',
     };
     const url=`https://api.geoapify.com/v1/geocode/search?text=${location}&apiKey=9cf4359529584c638335211a6e8f9681`
+    let apiFirstResult = '';
     fetch(url, requestOptions)
       .then(response => response.json())
-      .then(result => console.log(result))
+      .then(result => apiFirstResult = result)
       .catch(error => console.log('error', error));
+
+      // const latitude = apiFirstResult.features[0].properties.lat;
+      // const longitude = apiFirstResult.features[0].properties.lon;
+      console.log(apiFirstResult);
+      const restaurantUrl = 'https://worldwide-restaurants.p.rapidapi.com/search';
+
+      const options = {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/x-www-form-urlencoded',
+          'X-RapidAPI-Key': 'fe7f75a935msh568e513c046d99bp1ff4bdjsnaaf41eca86eb',
+          'X-RapidAPI-Host': 'worldwide-restaurants.p.rapidapi.com'
+        },
+        body: new URLSearchParams({
+          language: 'en_US',
+          limit: '30',
+          location_id: `${latitude},${longitude}`,
+          currency: 'USD'
+        })
+      };
+
+      fetch(restaurantUrl, restaurantOptions)
+        .then(response => response.json())
+        .then(result => console.log(result))
+        .catch(restaurantError => console.log('Restaurant API error', restaurantError));
+
   }, [location]);
 
+  //Retrieve the lon and lat variable from the Geoapify
+  //Create a function that take the lon and lat variable from geopapify as parameter to fecth worldwide restaurants api
+
+  //map the data of worldwild restaurant in the return statement. 
   return (
     <div className='lg:px-30 sm:px-16 px-10'>
       <div>
