@@ -64,7 +64,7 @@ function Footer() {
           </div>
         </div>
         <div className='py-5'>
-          <p className='text-gray-300 flex justify-center'>© 2022 All rights reserved.</p>
+          <p className='text-gray-300 flex justify-center'>© 2023 All rights reserved.</p>
         </div>
     </footer>
   )

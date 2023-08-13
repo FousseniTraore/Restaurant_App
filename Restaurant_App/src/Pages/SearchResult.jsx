@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom'
 
 const SearchResult = () => {
@@ -47,7 +47,7 @@ const SearchResult = () => {
   const navigate = useNavigate();
 
   const viewDetail = () => {
-    navigate(`/restaurant/${index}`);
+    navigate(`/restaurant/:index"`);
   }
  
   
@@ -71,12 +71,12 @@ const SearchResult = () => {
                   <p className='text-gray-700 text-base'>{restaurant.country}</p>
                   <p className='font-bold py-5'>{restaurant.price}</p>
                   {/* button to view details */}
-                  <button
+                  <Link
                     onClick={viewDetail}
                     className="flex-none rounded-md bg-BritishGreen px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#16a34a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                   >
                     More details
-                  </button>   
+                  </Link>   
                 </div>
               </div>
             ))}
