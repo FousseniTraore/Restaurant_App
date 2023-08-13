@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import restPic from '../assets/HeroFormBg.jpg'
-const RestaurantDetails = () => {
+
+
+const RestaurantDetails = ({results}) => {
+
+  const { index } = useParams();
+  const restaurantDetail = results[index];
+
+
   return (
     <div className='lg:px-30 sm:px-16 px-10'>
         <h1>Restaurant Name</h1>
