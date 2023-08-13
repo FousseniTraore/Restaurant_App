@@ -50,15 +50,26 @@ const SearchResult = () => {
       {/* render the restaurant data */}
       {results ? (
         <div>
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">The best restaurant in {location}</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-BritishGreen">The best restaurant in {location}</h2>
+          <p>view more information and book TheTable you like with any of these restaurant</p>
           {results.data && results.data.map((restaurant, index) => (
-            <div key={index}>
-              <div>
-                <img src={restaurant.photo.images.small.url} alt={restaurant.name} />
+            <div key={index} className='group-hover:opacity-75 max-w-sm rounded overflow-hidden shadow-lg py-10'>
+              <div className='h-[175px] w-[313.33px]'>
+                <img src={restaurant.photo.images.original.url} className='w-full h-full' alt={restaurant.name} />
               </div>
-              <h3>{restaurant.name}</h3>
-              <p>Address: {restaurant.address}</p>
-              
+              <div className='px-6 py-4'>
+                <h2>{restaurant.cuisine.name} Italian</h2>
+                <h3 className='font-bold text-xl  text-BritishGreen mb-2'>{restaurant.name}</h3>
+                <p className='text-gray-700 text-base'>{restaurant.address}</p>
+                <p className='text-gray-700 text-base'>{restaurant.country}</p>
+                <p className='font-bold py-5'>{restaurant.price}</p>
+                {/* button to view details */}
+                <button
+                  className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                >
+                  More details
+                </button>   
+              </div>
             </div>
           ))}
         </div>

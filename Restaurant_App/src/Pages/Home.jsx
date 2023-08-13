@@ -47,7 +47,12 @@ function Home () {
                 </div>
               </div>
               <div className="mt-10">
-                <button onClick={searchRestaurant} className="block w-full rounded-md bg-BritishGreen px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#14532d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-BritishGreen">Search</button>
+                <button 
+                  onClick={searchRestaurant} 
+                  className="block w-full rounded-md bg-BritishGreen px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#14532d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-BritishGreen"
+                >
+                  Search
+                </button>
               </div>
             </div>
           </div>

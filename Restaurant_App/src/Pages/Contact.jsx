@@ -4,35 +4,36 @@ import Logo from '../assets/TheTable-removebg-preview.png'
 function Contact() {
   return (
     <div className='lg:px-30 sm:px-16 px-10 py-10 md:py-20'>
-      <div className="px-6 isolate bg-white py-24 sm:py-32 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <div className='w-[250px] h-[250px]'>
-            <img src={Logo} className='w-full h-full object-contain' alt="" />
-          </div>
-          <p className="mt-2 text-lg leading-8 text-gray-600">Aute magna irure deserunt veniam aliqua magna enim voluptate.</p>
+      <div className='pb-10 md:pb-5'>
+        <h1 className='text-BritishGreen font-bold text-5xl'>Contact Us </h1>
+      </div>
+      <div className="px-6 isolate bg-white  sm:py-3 lg:px-8">
+        <div className="mx-auto  text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Send us a message</h2>
+          <p className="mt-2 text-lg leading-8 text-gray-600">Ask anything you might need, our team will be happy to guide you</p>
         </div>
         <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
-              <label  className="block text-sm font-semibold leading-6 text-gray-900">First name</label>
+              <label  className="block text-sm font-semibold leading-6 text-BritishGreen">First name</label>
               <div className="mt-2.5">
                 <input type="text" name="first-name" id="first-name" className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-BritishGreen sm:text-sm sm:leading-6"/>
               </div>
             </div>
             <div>
-              <label  className="block text-sm font-semibold leading-6 text-gray-900">Last name</label>
+              <label  className="block text-sm font-semibold leading-6 text-BritishGreen">Last name</label>
               <div className="mt-2.5">
                 <input type="text" name="last-name" id="last-name" className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-BritishGreen sm:text-sm sm:leading-6"/>
               </div>
             </div>
             <div className="sm:col-span-2">
-              <label className="block text-sm font-semibold leading-6 text-gray-900">Email</label>
+              <label className="block text-sm font-semibold leading-6 text-BritishGreen">Email</label>
               <div className="mt-2.5">
                 <input type="email" name="email" id="email" className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-BritishGreen sm:text-sm sm:leading-6"/>
               </div>
             </div>
             <div className="sm:col-span-2">
-              <label className="block text-sm font-semibold leading-6 text-gray-900">Message</label>
+              <label className="block text-sm font-semibold leading-6 text-BritishGreen">Message</label>
               <div className="mt-2.5">
                 <textarea name="message" id="message" rows="4" className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-BritishGreen sm:text-sm sm:leading-6"></textarea>
               </div>
